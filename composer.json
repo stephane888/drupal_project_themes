@@ -15,11 +15,11 @@
         },
         {
 		"type": "vcs",
-		"url": "[git@51.222.28.99:22]:bestlayouts"
+		"url": "[git@51.222.28.99:22]:bestlayouts.git"
 	},
         {
 		"type": "vcs",
-		"url": "[git@51.222.28.99:22]:democontents"
+		"url": "[git@51.222.28.99:22]:democontents.git"
 	}
     ],
     "require": {
@@ -34,7 +34,7 @@
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
         "allow-plugins": {
@@ -72,13 +72,15 @@
                 "type:drupal-drush"
             ],
             "modules/custom/{$name}": [
-                "type:drupal-custom-module"
+                "type:drupal-custom-module",
+                "type:drupal-module-custom"
             ],
             "profiles/custom/{$name}": [
                 "type:drupal-custom-profile"
             ],
             "themes/custom/{$name}": [
-                "type:drupal-custom-theme"
+                "type:drupal-custom-theme",
+                "type:drupal-theme-custom"
             ]
         },
         "drupal-core-project-message": {
